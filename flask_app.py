@@ -22,9 +22,9 @@ def main():
         }
     }
 
-    handle_dialog(request.json, response)
+    # handle_dialog(request.json, response)
 
-    logging.info('Response:' + request.json)
+    # logging.info('Response:' + request.json)
 
     return json.dumps(response)
 
@@ -50,8 +50,8 @@ def handle_dialog(req, res):
         'куплю',
         'покупаю',
         'хорошо',
-        'Я покупаю',
-        'Я куплю'
+        'я покупаю',
+        'я куплю'
     ]:
         res['response']['text'] = 'Слона можно найти на Яндекс.Маркете!'
         res['response']['end_session'] = True
