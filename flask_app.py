@@ -12,7 +12,7 @@ sessionStorage = {}
 
 @app.route('/post', methods=['POST'])
 def main():
-    logging.info('Request: %r', request.json)
+    logging.info('Request:' + request.json)
 
     response = {
         'session': request.json['session'],
@@ -24,7 +24,7 @@ def main():
 
     handle_dialog(request.json, response)
 
-    logging.info('Response: %r', request.json)
+    logging.info('Response:' + request.json)
 
     return json.dumps(response)
 
